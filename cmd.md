@@ -35,10 +35,15 @@ perf script -i perf.data &> perf.unfold
 ./flamegraph.pl perf.folded > perf.svg
 
 pstack pid //进程调用堆栈
+
 strace -p pid //进程系统调用
+
 perf top -p pid //进程实时调用函数情况
+
 perf stat -p pid //运行命令会挂载,ctr+c 后显示统计调用系统 cpu 使用时间等
+
 sudo perf trace -p pid //当前程序系统调用函数显示
+
 sudo perf ftrace -p pid //当前程序系统内核调用时间情况
 
 sudo tcpdump -vv -i interface port 6379
