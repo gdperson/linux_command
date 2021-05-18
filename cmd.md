@@ -47,3 +47,6 @@ sudo perf trace -p pid //当前程序系统调用函数显示
 sudo perf ftrace -p pid //当前程序系统内核调用时间情况
 
 sudo tcpdump -vv -i interface port 6379
+
+[Tue May 18 16:01:43 2021] redis-server[554663]: segfault at 65fd4a238 ip 00000000004bd730 sp 00007f9e64ffbb70 error 4 in redis-server[400000+128000]
+addr2line -e redis-server 00000000004bd730
