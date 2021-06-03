@@ -5,6 +5,7 @@ Host Port: 1111, Guest Port: 22, leave the host IP and guest IP blank
 Connect from your Mac cmd shell using the following
 
 ssh -p 1111 cloudera@localhost
+
 At Ubuntu 18.04 additionally install ssh and reboot
 
 sudo apt-get install openssh-server
