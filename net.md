@@ -6,3 +6,6 @@ ss 和 netstat 是查看活动链接/监听端口的常用命令。ss 是 netsta
 
 ss 是 iproute2util 包的一部分，因此在大多数系统上默认安装，也可通过yum install -y iproute安装。netstat 来自 net-tools 包，新版系统上需要自行安装：yum install -y net-tools
 ss -nt 查看 tcp 链接
+
+查看 是否有 tcp 重传,如果没有会打印空
+ss -anti | grep -B 1 retrans
